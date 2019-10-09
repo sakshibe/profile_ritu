@@ -39,14 +39,19 @@
 				</div>
 				
 			</div>
-		</div>
-		<div>
-			<div>
-				<img src = "images/back2.jpg" id = "image1"></img>
+			<div class="row">
+			
+					<img src = "images/back2.jpg" id = "image1"></img>
+				
 			</div>
+			<div class="row">
+				<!--Placeholder for template loaded by ngRoute-->
+				<div ng-view></div>
+			</div>
+
 		</div>
-		<!--Placeholder for template loaded by ngRoute-->
-		<ng-view></ng-view>
+		
+		
 		
 		<!--CDN for Bootstrap-->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

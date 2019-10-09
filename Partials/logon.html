@@ -1,23 +1,25 @@
 <div class = "container">
-			<h3>Sign up for a new account</h3>
-				<div class="card">
-				<form name="loginform">
-					<fieldset>
-						<legend>Login</legend>
-						<div>							
-							<input name = "fname" type="text" placeholder="First Name">	
-						</div>
-						<div>
-							<input name = "lname" type="text" placeholder="Last Name"></input>
-						</div>
-						<div>
-							<input name = "email" type="email" placeholder="Email"></input>
-						</div>
-						<div>
-							<input name = "pass" type="password" placeholder="Password"></input>
-						</div>
-					</fieldset>
-					
-				</form>
-			
+	
+		
+			<form name="logonform" novalidate>
+
+				<legend>Sign up for a new account</legend>
+				<div class="form-group">						
+					<input name = "fname" type="text" class="form-control" ng-required="true" placeholder="Enter your first name" ng-model="user.firstname">	
+					<p ng-show="logonform.fname.$invalid && logonform.fname.$touched">This is a required field</p>
+				</div>
+				<div class="form-group">
+					<input name = "lname" type="text" class="form-control" ng-required="true" placeholder="Enter your last name" ng-model="user.lastname"></input>
+					<p ng-show="logonform.lname.$invalid && logonform.lname.$touched">This is a required field</p>
+				</div>
+				<div class="form-group">
+					<input name = "email" type="email" class="form-control" ng-required="true" placeholder="Enter your Email ID" ng-model="user.email"></input>
+					<p ng-show="logonform.email.$invalid && logonform.email.$touched">Please enter a valid email address</p>
+				</div>
+				<div class="form-group">
+					<input name = "pass" type="password" class="form-control" ng-required="true" placeholder="Create a password" ng-model="user.password"></input>
+					<p ng-show="logonform.pass.$invalid && logonform.pass.$touched">Please enter a valid password</p>
+				</div>			
+			</form>
+		
 </div>

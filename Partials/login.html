@@ -1,19 +1,15 @@
 <div class = "container">
-			<h3>Login to an existing account</h3>
-			<div class="card">
-				<form name="loginform">
-					<fieldset>
-						<legend>Login</legend>
-
-						<div>
-							<input name = "email" type="email" placeholder="Email"></input>
-						</div>
-						<div>
-							<input name = "pass" type="password" placeholder="Password"></input>
-						</div>
-					</fieldset>
-					
-				</form>
+	<form name="loginform">
+		
+		<legend>Login to an existing account</legend>
+			<div class="form-group">
+				<input autocomplete="off" name = "email" class = "form-control" ng-model = "user.email" ng-required="true" type="email" placeholder="Email"></input>
+				<p ng-show="loginform.email.$invalid && loginform.email.$touched">Please enter a valid email ID</p>
 			</div>
-			
+			<div class="form-group">
+				<input name = "pass" class = "form-control" ng-model = "user.password" ng-required="true" type="password" placeholder="Password"></input>
+				<p ng-show="loginform.pass.$invalid && loginform.pass.$touched">Please enter a valid password</p>
+			</div>		
+		
+	</form>		
 </div>

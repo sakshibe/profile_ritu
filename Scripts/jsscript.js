@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp',['ngRoute'])
+var myApp = angular.module("myApp",["ngRoute"])
 
-myApp.controller('MyController', function($scope){
+myApp.controller("MyController", function($scope){
 	$scope.abouttext = "Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu.	Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu.	Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu.  Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu. Text about Ritu.";
 	
 	$scope.blogtext = "Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu. Blog from Ritu."
@@ -11,33 +11,33 @@ myApp.controller('MyController', function($scope){
 
 myApp.config(function ($routeProvider){
 	$routeProvider
-	.when ('/',
+	.when ("/",
 	{
-		controller: 'MyController',
-		templateUrl: 'Partials/about.html'
+		controller: "MyController",
+		templateUrl: "Partials/about.html"
 	})
-	.when ('/blog',
+	.when ("/blog",
 	{
-		controller: 'MyController',
-		templateUrl: 'Partials/blog.html'
+		controller: "MyController",
+		templateUrl: "Partials/blog.html"
 	})
-	.when ('/contact',
+	.when ("/contact",
 	{
-		controller: 'MyController',
-		templateUrl: 'Partials/contact.html'
+		controller: "MyController",
+		templateUrl: "Partials/contact.html"
 	})
-	.when ('/login',
+	.when ("/login",
 	{
-		controller: 'MyController',
-		templateUrl: 'Partials/login.html'
+		controller: "MyController",
+		templateUrl: "Partials/login.html"
 	})
-	.when ('/logon',
+	.when ("/logon",
 	{
-		controller: 'MyController',
-		templateUrl: 'Partials/logon.html'
+		controller: "MyController",
+		templateUrl: "Partials/logon.html"
 	})
 	.otherwise (
-	{redirectTo: '/'}
+	{redirectTo: "/"}
 	);
 }
 );
